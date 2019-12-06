@@ -1,4 +1,5 @@
 import os
+import re
 import unittest
 from selenium import webdriver
 os.environ['MOZ_HEADLESS'] = '1'
@@ -17,7 +18,7 @@ class Challenge1(unittest.TestCase):
         popular = self.browser.find_element_by_id('tabTrending')
         for a in popular.find_elements_by_tag_name('a'):
             href = a.get_attribute('href')
-            if "category" not in href:
+            if re.search("make|model", href):
                 print(a.text + ' - ' + href)
 
 
