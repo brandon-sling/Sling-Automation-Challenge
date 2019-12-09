@@ -4,7 +4,7 @@ from selenium import webdriver
 os.environ['MOZ_HEADLESS'] = '1'
 
 
-class Challenge1(unittest.TestCase):
+class Challenge(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -12,7 +12,7 @@ class Challenge1(unittest.TestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_challenge1(self):
+    def test_challenge(self):
         self.browser.get("https://www.copart.com")
 
 
