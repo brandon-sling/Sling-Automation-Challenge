@@ -64,7 +64,7 @@ class Fibonacci(object):
 class Challenge4(unittest.TestCase):
 
     def test_challenge4(self):
-        Fibonacci(50)
+        Fibonacci(316)
 
 
 if __name__ == '__main__':
